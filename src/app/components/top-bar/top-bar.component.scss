@@ -1,0 +1,23 @@
+.top-bar-container {
+    height: 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    background-color: darkgrey;
+}
+
+.top-bar-tab {
+    display: flex;
+    justify-content: center;
+    max-width: 15%;
+    padding: 1%;
+}
+
+.tab-container {
+    border: none;
+    background: none;
+    font-size: 15px;
+    font-family: Franklin Gothic Medium;
+    cursor: pointer;
+}

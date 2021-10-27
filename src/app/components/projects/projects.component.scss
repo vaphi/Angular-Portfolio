@@ -1,5 +1,19 @@
-.projects-container{
+.projects-container {
+    display: flex;
+    justify-content: center;
     width: 100%;
     height: 100vh;
-    background-color:darkolivegreen;
+    background-image: linear-gradient(#0a2830, #52435e);
+}
+
+.construction {
+    margin: auto;
+    text-align: center;
+    img {
+        width: 20%;
+    }
+}
+
+.heading {
+    font-family: "ArcadeClassic", sans-serif;
 }

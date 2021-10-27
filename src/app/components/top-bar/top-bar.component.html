@@ -1,17 +1,22 @@
 <div class="top-bar-container">
     <div class="top-bar-tab">
-        <button class="tab-container">
+        <button class="tab-container" (click)="homeClicked()">
+            Home
+        </button>
+    </div>
+    <div class="top-bar-tab">
+        <button class="tab-container" (click)="aboutMeClicked()">
             About Me
         </button>
     </div>
     <div class="top-bar-tab">
-        <button class="tab-container">
+        <button class="tab-container" (click)="projectsClicked()">
             Projects
         </button>
     </div>
-    <div class="top-bar-tab">
+    <!-- <div class="top-bar-tab">
         <button class="tab-container">
             Contact
         </button>
-    </div>
+    </div> -->
 </div>

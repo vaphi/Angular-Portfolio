@@ -1,0 +1,144 @@
+@mixin iconColor($color) {
+    filter: opacity(0.2) drop-shadow(0 0 0 $color) drop-shadow(0 0 0 $color) drop-shadow(0 0 0 $color);
+}
+
+.home-container {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    background-color: darkslateblue;
+    background-image: url("../../../assets/images/background3.jpg");
+}
+
+.content-container {
+    display: flex;
+    flex-direction: column;
+}
+.welcome {
+    margin: auto;
+    .welcome-container {
+        padding-bottom: 3%;
+
+        .welcome-text {
+            text-align: center;
+            margin: auto;
+            font-family: "ArcadeClassic", sans-serif;
+            word-spacing: 20px;
+            font-size: xxx-large;
+            text-shadow: -1px 1px 0 darkgrey, 1px 1px 0 black, 1px -1px 0 black, -1px -1px 0 white;
+            &:hover {
+                color: white;
+                text-shadow: -1px 1px 0 black, 1px 1px 0 black, 1px -1px 0 black, -1px -1px 0 black;
+            }
+        }
+    }
+}
+
+.socials {
+    display: flex;
+    justify-content: center;
+
+    .linkedin {
+        margin-right: 3%;
+        .linkedin-img {
+            width: 64px;
+            cursor: pointer;
+
+            &:hover {
+                @include iconColor(red);
+            }
+        }
+    }
+
+    .github {
+        .github-img {
+            width: 64px;
+            cursor: pointer;
+
+            &:hover {
+                @include iconColor(red);
+            }
+        }
+    }
+}
+
+.circle-container {
+    margin-top: -9%;
+    $particleNum: 200;
+    $particleColor: hsl(180, 100%, 80%);
+
+    position: absolute;
+    transform: translateY(-10vh);
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+
+    .circle {
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        mix-blend-mode: screen;
+        background-image: radial-gradient(hsl(180, 100%, 80%), hsl(180, 100%, 80%) 10%, hsla(180, 100%, 80%, 0) 56%);
+
+        animation: fadein-frames 200ms infinite, scale-frames 2s infinite;
+
+        @keyframes fade-frames {
+            0% {
+                opacity: 1;
+            }
+
+            50% {
+                opacity: 0.7;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+
+        @keyframes scale-frames {
+            0% {
+                transform: scale3d(0.4, 0.4, 1);
+            }
+
+            50% {
+                transform: scale3d(2.2, 2.2, 1);
+            }
+
+            100% {
+                transform: scale3d(0.4, 0.4, 1);
+            }
+        }
+    }
+
+    $particleBaseSize: 8;
+
+    @for $i from 1 through $particleNum {
+        &:nth-child(#{$i}) {
+            $circleSize: random($particleBaseSize);
+            width: $circleSize + px;
+            height: $circleSize + px;
+
+            $startPositionY: random(10) + 100;
+            $framesName: "move-frames-" + $i;
+            $moveDuration: 28000 + random(9000) + ms;
+
+            animation-name: #{$framesName};
+            animation-duration: $moveDuration;
+            animation-delay: random(37000) + ms;
+
+            @keyframes #{$framesName} {
+                from {
+                    transform: translate3d(#{random(100) + vw}, #{$startPositionY + vh}, 0);
+                }
+
+                to {
+                    transform: translate3d(#{random(100) + vw}, #{- $startPositionY - random(30) + vh}, 0);
+                }
+            }
+
+            .circle {
+                animation-delay: random(4000) + ms;
+            }
+        }
+    }
+}

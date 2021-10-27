@@ -1,5 +1,7 @@
-<app-top-bar class="top-bar"></app-top-bar>
-<app-about-me></app-about-me>
-<app-projects></app-projects>
-<app-contact></app-contact>
+<app-top-bar (homeClick)="homeClicked($event)" (aboutMeClick)="aboutMeClicked($event)" (projectsClick)="projectsClicked($event)"
+    class="top-bar"></app-top-bar>
+<app-home id="homeComponent" #home class="home"></app-home>
+<app-about-me id="aboutMeComponent" #aboutMe class="about-me"></app-about-me>
+<app-projects id="projectsComponent" #projects class="projects"></app-projects>
+<!-- <app-contact class="contact"></app-contact> -->
 <router-outlet></router-outlet>

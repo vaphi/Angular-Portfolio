@@ -1,4 +1,4 @@
-<app-top-bar (homeClick)="homeClicked($event)" (aboutMeClick)="aboutMeClicked($event)" (projectsClick)="projectsClicked($event)"
+<app-top-bar [viewElement]="currTopBar" (homeClick)="homeClicked($event)" (aboutMeClick)="aboutMeClicked($event)" (projectsClick)="projectsClicked($event)"
     class="top-bar"></app-top-bar>
 <app-home id="homeComponent" #home class="home"></app-home>
 <app-about-me id="aboutMeComponent" #aboutMe class="about-me"></app-about-me>

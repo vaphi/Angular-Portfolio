@@ -1,4 +1,4 @@
-<div class="top-bar-container">
+<div class="top-bar-container" [ngStyle]="getStyle(viewElement)">
     <div class="top-bar-tab">
         <button class="tab-container" (click)="homeClicked()">
             Home

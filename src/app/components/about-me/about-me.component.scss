@@ -19,11 +19,11 @@
         flex-basis: 50%;
 
         .right-left-container {
-            margin: 25% 0;
             display: flex;
             flex-direction: column;
-            flex-basis: 50%;
+            flex-basis: 100%;
             height: inherit;
+            justify-content: center;
 
             .experienced-header {
                 color: white;
@@ -42,7 +42,6 @@
 
         .right-right-container {
             margin: auto;
-            flex-basis: 50%;
             height: inherit;
         }
     }
@@ -69,6 +68,6 @@
     padding-bottom: 2%;
 
     img {
-        width: 30%;
+        width: 40%;
     }
 }

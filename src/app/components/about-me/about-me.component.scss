@@ -1,62 +1,66 @@
 .about-me-container {
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    height: 100vh;
     background-image: linear-gradient(#020f16, #0a2830);
 
-    .left-container {
-        margin: auto;
-        text-align: center;
-        flex-basis: 50%;
-    }
-
-    .right-container {
+    .about-me-inner-container {
         display: flex;
         flex-direction: row;
-        height: inherit;
         width: 100%;
-        flex-basis: 50%;
+        height: 100vh;
 
-        .right-left-container {
-            display: flex;
-            flex-direction: column;
-            flex-basis: 100%;
-            height: inherit;
-            justify-content: center;
-
-            .experienced-header {
-                color: white;
-            }
-
-            .experienced {
-                display: flex;
-                flex-wrap: wrap;
-                color: white;
-
-                .tech-item {
-                    width: 45%;
-                }
-            }
+        .left-container {
+            margin: auto;
+            text-align: center;
+            flex-basis: 50%;
         }
 
-        .right-right-container {
-            margin: auto;
+        .right-container {
+            display: flex;
+            flex-direction: row;
             height: inherit;
+            width: 100%;
+            flex-basis: 50%;
+
+            .right-left-container {
+                display: flex;
+                flex-direction: column;
+                flex-basis: 100%;
+                height: inherit;
+                justify-content: center;
+
+                .experienced-header {
+                    color: white;
+                }
+
+                .experienced {
+                    display: flex;
+                    flex-wrap: wrap;
+                    color: white;
+
+                    .tech-item {
+                        width: 45%;
+                    }
+                }
+            }
+
+            .right-right-container {
+                margin: auto;
+                height: inherit;
+            }
         }
     }
 }
 
-.resume-button {
-    background-color: lightblue;
-    height: 50px;
-    width: 200px;
-    padding-top: 1%;
-    font-size: 20px;
-    font-family: monospace;
+.social-container {
+    padding-top: 3%;
 
-    &:hover {
-        background-color: #cc6b8e;
+    .resume-button {
+        background-color: lightblue;
+        font-size: 20px;
+        font-family: monospace;
+
+        &:hover {
+            background-color: #cc6b8e;
+        }
     }
 }
 
@@ -69,5 +73,56 @@
 
     img {
         width: 40%;
+    }
+}
+
+@media (max-width: 767px) {
+    .about-me-container {
+        .about-me-inner-container {
+            justify-content: center;
+            display: flex;
+            flex-direction: column;
+
+            .left-container {
+                text-align: center;
+
+                margin: unset;
+                flex-basis: unset;
+            }
+
+            .right-container {
+                flex-basis: unset;
+                height: unset;
+                padding-top: 3%;
+
+                .right-left-container {
+                    display: flex;
+                    flex-direction: column;
+                    flex-basis: 100%;
+                    height: inherit;
+                    justify-content: center;
+                    padding-left: 15%;
+
+                    .experienced-header {
+                        color: white;
+                    }
+
+                    .experienced {
+                        display: flex;
+                        flex-wrap: wrap;
+                        color: white;
+
+                        .tech-item {
+                            width: 50%;
+                        }
+                    }
+                }
+
+                .right-right-container {
+                    margin: auto;
+                    height: inherit;
+                }
+            }
+        }
     }
 }

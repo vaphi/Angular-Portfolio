@@ -1,6 +1,6 @@
 {
   "name": "profile",
-  "homepage": "https://vaphi.github.io/profile/",
+  "homepage": "https://vaphi.github.io/profile",
   "version": "0.0.0",
   "scripts": {
     "predeploy": "npm run build",

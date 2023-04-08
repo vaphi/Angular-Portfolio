@@ -1,7 +1,10 @@
 {
   "name": "portfolio",
+  "homepage": "https://vaphi.github.io/profile/",
   "version": "0.0.0",
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist/portfolio",
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",

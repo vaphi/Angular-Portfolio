@@ -1,12 +1,130 @@
 <div class="projects-container">
-  <div class="construction">
-    <!-- <img src="assets/images/construction.png">
-        <h1 class="heading">Under Construction</h1> -->
+  <div class="button-website">
+    <button
+      onclick="window.open('https://anidata.netlify.app/home');"
+      type="button"
+      mat-raised-button
+      color="primary"
+    >
+      AniData Website
+    </button>
+    <button
+      onclick="window.open('https://myrecipelist.netlify.app');"
+      type="button"
+      mat-raised-button
+      color="primary"
+    >
+      RecipeList Website
+    </button>
+  </div>
+  <div class="table-container">
+    <mat-tab-group fitInkBarToContent headerPosition="below">
+      <mat-tab class="tab" label="RecipeList(Under Development)">
+        <div class="recipe-list-pics-container">
+          <div class="card-container anidata-description">
+            <mat-card>
+              <mat-card-header
+                >Description: Created with React and used BootStrap for majority
+                of user interface. Use NestJS for the server and PostgreSQL for
+                the DB. Also implemented Auth0 for authentication. Need to
+                research free alternative to house server, currently do not have
+                a server host.
 
-    <mat-tab-group>
-      <mat-tab label="First"> Content 1 </mat-tab>
-      <mat-tab label="Second"> Content 2 </mat-tab>
-      <mat-tab label="Third"> Content 3 </mat-tab>
+                <!-- <button
+                  onclick="window.open('https://myrecipelist.netlify.app');"
+                  type="button">
+                  AniData Website
+                </button> -->
+              </mat-card-header>
+            </mat-card>
+          </div>
+          <div class="card-container">
+            <mat-card>
+              <mat-card-header> </mat-card-header>
+              <mat-card-content>
+                <img class="sample-img" src="assets/images/recipe1.png" />
+              </mat-card-content>
+            </mat-card>
+          </div>
+
+          <div class="card-container">
+            <mat-card>
+              <mat-card-header> </mat-card-header>
+              <mat-card-content>
+                <img class="sample-img" src="assets/images/recipe2.png" />
+              </mat-card-content>
+            </mat-card>
+          </div>
+
+          <div class="card-container">
+            <mat-card>
+              <mat-card-header> </mat-card-header>
+              <mat-card-content>
+                <img class="sample-img" src="assets/images/recipe3.png" />
+              </mat-card-content>
+            </mat-card>
+          </div>
+
+          <div class="card-container">
+            <mat-card>
+              <mat-card-header> </mat-card-header>
+              <mat-card-content>
+                <img class="sample-img" src="assets/images/recipe4.png" />
+              </mat-card-content>
+            </mat-card>
+          </div>
+        </div>
+      </mat-tab>
+
+      <mat-tab class="tab" label="AniData(Under Development)">
+        <div class="anidata-pics-container">
+          <div class="card-container anidata-description">
+            <mat-card>
+              <mat-card-header
+                >Description: Created with Angular and used Material UI for
+                majority of user interface. Utilized AniList's Api to retrieve
+                anime and manga information.
+                <!-- <button
+                  onclick="window.open('https://anidata.netlify.app/home');"
+                  type="button"
+                >
+                  AniData Website
+                </button> -->
+              </mat-card-header>
+            </mat-card>
+          </div>
+          <div class="card-container">
+            <mat-card>
+              <mat-card-header> </mat-card-header>
+              <mat-card-content>
+                <img class="sample-img" src="assets/images/anidata1.png" />
+              </mat-card-content>
+            </mat-card>
+          </div>
+
+          <div class="card-container">
+            <mat-card>
+              <mat-card-header> </mat-card-header>
+              <mat-card-content>
+                <img class="sample-img" src="assets/images/anidata2.png" />
+              </mat-card-content>
+            </mat-card>
+          </div>
+
+          <div class="card-container">
+            <mat-card>
+              <mat-card-header> </mat-card-header>
+              <mat-card-content>
+                <img class="sample-img" src="assets/images/anidata3.png" />
+              </mat-card-content>
+            </mat-card>
+          </div>
+        </div>
+      </mat-tab>
     </mat-tab-group>
   </div>
+  <!-- <div class="construction"> 
+ <img src="assets/images/construction.png">
+        <h1 class="heading">Under Construction</h1>
+  </div> -->
 </div>

@@ -1,9 +1,12 @@
 .projects-container {
+    padding-top: 5.1vh;
     display: flex;
     justify-content: center;
     width: 100%;
     height: 100vh;
     background-image: linear-gradient(#0a2830, #52435e);
+    display: flex;
+    flex-direction: column;
 }
 
 .construction {
@@ -16,4 +19,88 @@
 
 .heading {
     font-family: "ArcadeClassic", sans-serif;
+}
+
+::ng-deep .mat-mdc-tab-group.mat-mdc-tab-group-stretch-tabs {
+    color: white;
+    height: 85vh;
+}
+
+.tab {
+    color: white;
+}
+
+::ng-deep .mat-mdc-tab-body {
+    height: 71vh;
+}
+
+::ng-deep .mat-tab-list {
+    margin: auto;
+    flex-grow: unset;
+}
+
+.anidata-pics-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.table-container {
+    width: 90%;
+    margin: 0 auto;
+}
+
+::ng-deep .mat-mdc-tab-body-wrapper {
+    border: solid #667b68 3px;
+    border-radius: 8px;
+}
+
+.mat-mdc-card-content {
+    padding: unset;
+}
+
+.mat-mdc-card-header {
+    padding: unset;
+    color: black;
+    font-size: x-large;
+}
+
+.mat-mdc-card-content:last-child {
+    padding: unset;
+}
+
+.card-header {
+    text-align: center;
+}
+
+::ng-deep .mat-mdc-tab-body-content {
+    overflow-x: hidden !important;
+}
+
+.sample-img {
+    width: 100%;
+}
+
+.chip {
+    color: white;
+}
+
+.button-website {
+    text-align: center;
+
+    button {
+        margin: 5px;
+    }
+}
+
+::ng-deep .mdc-tab__text-label {
+    color: white !important;
+}
+
+.anidata-description {
+    width: 100%;
+}
+
+.card-container{
+    width: 100%;
 }

@@ -9,6 +9,10 @@ import { HomeComponent } from './components/home/home.component';
 import { ProjectsComponent } from './components/projects/projects.component';
 import { TopBarComponent } from './components/top-bar/top-bar.component';
 import { MatTabsModule } from '@angular/material/tabs';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatCardModule } from '@angular/material/card';
+import { MatChipsModule } from '@angular/material/chips';
+import { MatButtonModule } from "@angular/material/button";
 
 @NgModule({
   declarations: [
@@ -19,7 +23,16 @@ import { MatTabsModule } from '@angular/material/tabs';
     ContactComponent,
     ProjectsComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, CommonModule, MatTabsModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    CommonModule,
+    MatTabsModule,
+    BrowserAnimationsModule,
+    MatCardModule,
+    MatChipsModule,
+    MatButtonModule
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })

@@ -1,5 +1,5 @@
 @mixin iconColor($color) {
-    filter: opacity(0.2) drop-shadow(0 0 0 $color) drop-shadow(0 0 0 $color) drop-shadow(0 0 0 $color);
+    filter: opacity(0.3) drop-shadow(0 0 0 $color) drop-shadow(0 0 0 $color) drop-shadow(0 0 0 $color);
 }
 
 .home-container {
@@ -45,7 +45,7 @@
             cursor: pointer;
 
             &:hover {
-                @include iconColor(red);
+                @include iconColor(#0077B5);
             }
         }
     }
@@ -56,7 +56,7 @@
             cursor: pointer;
 
             &:hover {
-                @include iconColor(red);
+                @include iconColor(#0077B5);
             }
         }
     }

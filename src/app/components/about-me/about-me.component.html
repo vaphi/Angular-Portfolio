@@ -1,36 +1,59 @@
 <div class="about-me-container">
-<div class="about-me-inner-container">
-    <div class="left-container">
-        <div class="profile-container">
-            <img src="assets/images/profile.png">
-        </div>
-
-        <div class="social-container">
-            <a class="btn resume-button" href="assets/files/Va_Phi_Resume.pdf" target="_blank">
-                <i class="fa fa-file resume-icon"></i>Resume
-            </a>
-        </div>
-
-    </div>
-    <div class="right-container">
-        <div class="right-left-container">
-            <div class="experienced-header">
-                <h3>Worked With:</h3>
+    <div class="about-me-inner-container">
+        <div class="left-container">
+            <div class="profile-container">
+                <img src="assets/images/profile.png">
             </div>
-            <div class="experienced">
-                <div class="tech-item" *ngFor="let item of items">
-                    <span>
-                        <li>
-                            {{item.tech}}
-                        </li>
-                    </span>
+
+            <div class="social-container">
+                <a class="btn resume-button" href="assets/files/Va_Phi_Resume.pdf" target="_blank">
+                    <i class="fa fa-file resume-icon"></i>Resume
+                </a>
+            </div>
+
+        </div>
+        <div class="right-container">
+            <div class="right-left-container">
+                <div class="experienced-header">
+                    <h4>Proficiency Scale:</h4>
+                    <mat-chip-listbox aria-label="skill-scale">
+                        <mat-chip style="background-color: orange;">
+                            Novice
+                        </mat-chip>
+                        <mat-chip style="background-color: gold;">
+                            Proficient
+                        </mat-chip>
+                        <mat-chip style="background-color: lightgreen;">
+                            Expert
+                        </mat-chip>
+                    </mat-chip-listbox>
+                </div>
+                <div class="experienced-header">
+                    <h4>Worked With:</h4>
+                </div>
+                <div class="experienced">
+                    <mat-chip-listbox aria-label="Skills">
+                        <ng-container *ngFor="let item of items">
+                            <ng-container [ngSwitch]="item.level">
+                                <mat-chip *ngSwitchCase="1" style="background-color: orange;">
+                                    {{item.tech}}
+                                </mat-chip>
+                                <mat-chip *ngSwitchCase="2" style="background-color: gold;">
+                                    {{item.tech}}
+                                </mat-chip>
+                                <mat-chip *ngSwitchCase="3" style="background-color: lightgreen;">
+                                    {{item.tech}}
+                                </mat-chip>
+                            </ng-container>
+
+                        </ng-container>
+                    </mat-chip-listbox>
                 </div>
             </div>
-        </div>
 
-        <!-- <div class="right-right-container">
+            <!-- <div class="right-right-container">
 
         </div> -->
-    </div>
+        </div>
     </div>
 </div>

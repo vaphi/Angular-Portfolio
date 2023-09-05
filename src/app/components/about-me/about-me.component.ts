@@ -16,7 +16,7 @@ export class AboutMeComponent {
       { tech: 'JavaScript', level: 2 },
       { tech: 'SQL', level: 2 },
       { tech: 'Angular 8+', level: 2 },
-      { tech: 'Cypress', level: 2 },
+      { tech: 'Docker', level: 1 },
       { tech: 'React', level: 1 },
       { tech: 'Auth0', level: 1 },
       { tech: 'MS Azure DevOps', level: 1 },

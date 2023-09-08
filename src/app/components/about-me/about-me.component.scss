@@ -2,10 +2,12 @@
     background-image: linear-gradient(#020f16, #0a2830);
 
     .about-me-inner-container {
+        padding: 5% 0;
         display: flex;
         flex-direction: row;
         width: 100%;
-        height: 100vh;
+        height: auto;
+        
 
         .left-container {
             margin: auto;
@@ -85,6 +87,8 @@
 @media (max-width: 767px) {
     .about-me-container {
         .about-me-inner-container {
+            padding: 5% 0;
+            height: auto;
             justify-content: center;
             display: flex;
             flex-direction: column;

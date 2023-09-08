@@ -7,7 +7,6 @@
         flex-direction: row;
         width: 100%;
         height: auto;
-        
 
         .left-container {
             margin: auto;
@@ -21,8 +20,6 @@
             height: inherit;
             width: 100%;
             flex-basis: 50%;
-            margin-left: 10%;
-            margin-right: 10%;
 
             .right-left-container {
                 display: flex;
@@ -31,10 +28,10 @@
                 height: inherit;
                 justify-content: center;
 
-                .about-me-header{
+                .about-me-header {
                     color: white;
                 }
-                
+
                 .experienced-header {
                     color: white;
                 }
@@ -114,7 +111,7 @@
                     padding-left: 15%;
                     padding-right: 15%;
 
-                    .about-me-header{
+                    .about-me-header {
                         color: white;
                     }
 
@@ -136,6 +133,64 @@
                 .right-right-container {
                     margin: auto;
                     height: inherit;
+                }
+            }
+        }
+    }
+
+    @media (max-width: 390px) {
+        .about-me-container {
+            .about-me-inner-container {
+                padding: 5% 0;
+                height: auto;
+                justify-content: center;
+                display: flex;
+                flex-direction: column;
+
+                .left-container {
+                    text-align: center;
+
+                    margin: unset;
+                    flex-basis: unset;
+                }
+
+                .right-container {
+                    flex-basis: unset;
+                    height: unset;
+                    padding-top: 3%;
+
+                    .right-left-container {
+                        display: flex;
+                        flex-direction: column;
+                        flex-basis: 100%;
+                        height: inherit;
+                        justify-content: center;
+                        padding-left: 15%;
+                        padding-right: 15%;
+
+                        .about-me-header {
+                            color: white;
+                        }
+
+                        .experienced-header {
+                            color: white;
+                        }
+
+                        .experienced {
+                            display: flex;
+                            flex-wrap: wrap;
+                            color: white;
+
+                            .tech-item {
+                                width: 50%;
+                            }
+                        }
+                    }
+
+                    .right-right-container {
+                        margin: auto;
+                        height: inherit;
+                    }
                 }
             }
         }
